@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Novo Treino{% endblock %}
+
+{% block content %}
+<h2>Novo treino</h2>
+
+<form method="post">
+    <label for="titulo">Título</label>
+    <input id="titulo" name="titulo" required>
+
+    <label for="tipo">Tipo</label>
+    <select id="tipo" name="tipo" required>
+        <option value="Cardio">Cardio</option>
+        <option value="Musculação">Musculação</option>
+        <option value="Mobilidade">Mobilidade</option>
+        <option value="Funcional">Funcional</option>
+    </select>
+
+    <label for="duracao">Duração em minutos</label>
+    <input id="duracao" name="duracao" type="number" min="1" required>
+
+    <p><button type="submit">Salvar</button></p>
+</form>
+{% endblock %}
